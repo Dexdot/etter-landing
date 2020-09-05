@@ -8,6 +8,11 @@
 
   border-radius: 48px
   line-height: 1
+  +link(#fff)
+
+  @media (max-width: $tab-sm)
+    min-height: 40px
+    padding: 13px 24px
 
 .btn__bg
   position: absolute
@@ -17,17 +22,26 @@
   height: 100%
 
   border-radius: 48px
-  background: $blue-l
+  background: $blue-s
   transition: $trs
 
 .btn:hover .btn__bg
-  background: darken($blue-l, 8%)
+  background: darken($blue-s, 8%)
 
 .btn__text
   +mont(m)
-  +link(#fff)
   line-height: 1
   white-space: nowrap
 
   position: relative
   z-index: 1
+
+.btn--outline
+  +link($black)
+
+  .btn__bg
+    background: 0
+    border: 1px solid #EDEDED
+
+  &:hover .btn__bg
+    border: 1px solid D4D4D4

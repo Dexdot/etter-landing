@@ -1,0 +1,20 @@
+extends ../templates/template.pug
+block content
+
+  section.hero
+    .container
+      .hero__inner
+        .hero__info
+          h1.hero__title.t-h1
+            span Человеческий
+            | Онлайн переводчик
+          .hero__paragraph
+            b.hero__subtitle Получить профессиональный перевод теперь так же просто как вызвать такси
+            p.hero__text Etter - онлайн переводчик, в котором перевод осуществяется людьми, а не программой. Мы как гугл переводчик, только у нас переводят люди. Вы можете получить результат уже через 15 минут, это реально, просто попробуйте!
+            
+          .hero__buttons
+            +btn({ text: 'Рассчитать стоимость' })
+            +btn({ text: 'О нас', isLink: true }).btn--outline
+          
+        .hero__img
+          img(src="/assets/img/svg/hero.svg" alt="Hero")
