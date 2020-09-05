@@ -1,0 +1,26 @@
+/**
+ * Headings.
+ *
+ * Redefine our heading styles against utility classes. This gives us a double
+ * stranded heading hierarchy whereby we can style one heading as another, e.g.:
+ *
+     <h4 class="t-h1">I am an H4 that is the same size as an H1</h4>
+ *
+ */
+
+.t-h1
+  +mont(b)
+  +heading-size-1
+  line-height: 1.1
+
+  @media (max-width: $tab)
+    line-height: 1.2
+    letter-spacing: -0.01em
+
+.t-h2
+  +mont(sb)
+  +heading-size-2
+  line-height: 1.2
+  letter-spacing: -0.01em
+
+

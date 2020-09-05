@@ -1,0 +1,33 @@
+.btn
+  position: relative
+
+  display: block
+  overflow: hidden
+  padding: 16px 32px
+  min-height: 48px
+
+  border-radius: 48px
+  line-height: 1
+
+.btn__bg
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+  border-radius: 48px
+  background: $blue-l
+  transition: $trs
+
+.btn:hover .btn__bg
+  background: darken($blue-l, 8%)
+
+.btn__text
+  +mont(m)
+  +link(#fff)
+  line-height: 1
+  white-space: nowrap
+
+  position: relative
+  z-index: 1

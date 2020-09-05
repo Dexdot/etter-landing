@@ -1,0 +1,20 @@
+/**
+ * https://www.smashingmagazine.com/2019/03/robust-layouts-container-units-css/
+ */
+
+.container 
+  margin-right: auto
+  margin-left: auto
+  padding-left: $unit
+  padding-right: $unit
+  
+\:root
+  --unit: 2.38vw
+  @media (max-width: $mob)
+    --unit: 16px
+
+@function unit-plus($fn)
+  @return calc(#{$unit} + #{$fn})
+
+@function minus($fn)
+  @return calc(-1 * #{$fn})

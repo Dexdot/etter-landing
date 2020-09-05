@@ -1,0 +1,11 @@
+@font-face
+  font-family: 'Inter'
+  src: url('../fonts/inter/Inter-Regular.woff2') format('woff2'),url('../fonts/inter/Inter-Regular.woff') format('woff')
+  font-style: normal
+  font-weight: 400
+  font-display: swap  
+
+=inter($weight: r)
+  @if $weight == r
+    font-family: 'Inter', sans-serif
+    font-weight: 400
