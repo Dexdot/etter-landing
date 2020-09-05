@@ -1,0 +1,54 @@
+.cta
+  padding: 56px 0 96px
+
+  @media (max-width: $tab-sm)
+    padding: 72px 0 80px
+
+.cta__inner
+  display: flex
+
+  @media (min-width: $tab-sm + 1)
+    align-items: center
+
+  @media (max-width: $tab-sm)
+    flex-direction: column
+
+.cta__img
+  @media (max-width: $tab-sm)
+    margin-bottom: 32px
+    width: 100%
+
+  @media (min-width: $tab-sm + 1)
+    min-width: 300px
+    width: 31%
+    margin-right: 7.8%
+    margin-left: 2.5%
+
+  img
+    display: block
+    width: 100%
+    height: auto
+
+.cta__text p
+  font-size: 18px
+  letter-spacing: -0.01em
+
+  margin-bottom: 32px
+
+  @media (max-width: $tab)
+    font-size: 16px
+
+.cta__title
+  margin-bottom: 16px
+  color: $blue-l
+
+  &.t-h2
+    @media (max-width: $mob)
+      font-size: 22px
+
+  span
+    color: $blue-s
+
+    @media (min-width: $tab-sm + 1)
+      display: block
+

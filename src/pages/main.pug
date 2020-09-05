@@ -18,3 +18,15 @@ block content
           
         .hero__img
           img(src="/assets/img/svg/hero.svg" alt="Hero")
+
+  section.cta
+    .container
+      .cta__inner
+        .cta__img
+          img(src="/assets/img/cta.png" alt="CTA")
+        .cta__text
+          h2.cta__title.t-h2
+            span Бюро переводов делают долго и дорого? 
+            | Машинный перевод не справляется?
+          p Тогда воспользуйтесь нашим сервисом. Это так же просто как вызвать такси. 
+          +btn({ text: 'Рассчитать стоимость' })
