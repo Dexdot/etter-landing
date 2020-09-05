@@ -1,0 +1,80 @@
+.banner
+  padding: 40px 0 56px
+
+  @media (max-width: $tab-sm)
+    padding: 80px 0
+    background: #F6F7FA
+
+.banner__inner
+  display: flex
+  position: relative
+
+  @media (min-width: $tab-sm + 1)
+    align-items: center
+
+  @media (max-width: $tab-sm)
+    flex-direction: column-reverse
+
+.banner__cover
+  position: absolute
+  right: 0
+
+  width: 100%
+  height: 363px
+
+  background: $blue-m
+  border-radius: 40px
+
+  @media (min-width: $tab-sm + 1)
+    top: 50%
+    transform: translateY(-50%)
+
+  @media (max-width: $tab-sm)
+    top: 0
+    right: minus($unit)
+
+    height: 67%
+    width: 60vw
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+
+.banner__text
+  position: relative
+  max-width: 332px
+
+  @media (min-width: $tab-sm + 1)
+    color: #fff
+    margin-left: 5.23vw
+
+  p
+    opacity: 0.8
+
+.banner__title
+  margin-bottom: 24px
+
+  @media (max-width: $tab-sm)
+    color: $blue-m
+
+  span
+    display: block
+
+    @media (max-width: $tab-sm)
+      color: $blue-l
+
+.banner__img
+  position: relative
+
+  @media (max-width: $tab-sm)
+    margin: 7% auto 50px
+    width: 100%
+    max-width: 430px
+
+  @media (min-width: $tab-sm + 1)
+    margin-left: 17%
+    min-width: 45.5%
+    width: 45.5%
+
+  img
+    display: block
+    width: 100%
+    height: auto
