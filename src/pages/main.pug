@@ -35,7 +35,7 @@ block content
     .container
       .banner__inner
         .banner__cover
-        
+
         .banner__text
           h2.banner__title.t-h2
             span Ваш перевод
@@ -44,4 +44,34 @@ block content
 
         .banner__img
           img(src="/assets/img/banner.png" alt="Banner")
+
+  section.cards
+    .container
+      h2.cards__title.t-h2
+        span С помощью нас 
+        | вы сможете получить
+
+      .cards__wrap
+        ul.cards__list
+          li
+            .card
+              img(src="/assets/img/cards-1.png" alt="#")
+              .card__inner
+                b.card__title Экспресс перевод коротких текстов
+                p.card__text Поддерживайте деловую переписку с вашими партнерами из Китая, Америки или любой другой страны.
+                +btn({ text: 'Рассчитать стоимость'})
+          li
+            .card
+              img(src="/assets/img/cards-2.png" alt="#")
+              .card__inner
+                b.card__title Быстрый перевод документов
+                p.card__text Профессиональный перевод документов, руководств, веб-сайтов, программного обеспечения и многого другого 
+                +btn({ text: 'Рассчитать стоимость'})
+          li
+            .card
+              img(src="/assets/img/cards-3.png" alt="#")
+              .card__inner
+                b.card__title Проверку качества перевода
+                p.card__text Заказжите проверку у Etter, наши профессионалы быстро проверят и исправят ошибки
+                +btn({ text: 'Рассчитать стоимость'})
 

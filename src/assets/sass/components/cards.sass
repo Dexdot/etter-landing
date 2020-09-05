@@ -1,0 +1,107 @@
+.cards
+  padding-bottom: 144px
+
+  @media (max-width: $tab-sm)
+    padding: 56px 0 48px
+
+.cards__title
+  color: $blue-s
+  margin-bottom: 56px
+
+  @media (min-width: $tab-sm + 1)
+    text-align: center
+
+  @media (max-width: $tab-sm)
+    margin-bottom: 24px
+
+  span
+    color: $blue-l
+    
+    @media (max-width: $tab-sm)
+      display: block
+
+.cards__wrap
+  max-width: 1376px
+  margin: 0 auto
+
+.cards__list
+  display: flex
+  margin-left: -28px
+  margin-top: -24px
+
+  @media (max-width: $tab)
+    flex-wrap: wrap
+
+  li
+    width: calc(33% - 28px)
+    margin-left: 28px
+    margin-top: 24px
+
+    @media (max-width: $tab)
+      width: calc(50% - 28px)
+
+    @media (max-width: $tab-sm)
+      width: calc(100% - 28px)
+
+// Card
+.card
+  box-shadow: 0px -4px 16px rgba(20, 30, 57, 0.05), 0px 24px 48px rgba(27, 70, 109, 0.05)
+  background: #fff
+  border-radius: 16px
+
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+
+  height: 100%
+  padding: 64px 40px 48px
+
+  @media (max-width: $tab-sm)
+    flex-direction: row
+    padding: 40px 32px 40px 24px
+
+.card img
+  object-fit: contain
+  display: block
+  height: 96px
+  max-width: 96px
+
+  @media (min-width: $tab-sm + 1)
+    margin-bottom: 48px
+
+  @media (max-width: $tab-sm)
+    height: 48px
+    max-width: 48px
+
+.card__inner
+  flex: 1
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+
+  @media (max-width: $tab-sm)
+    padding-left: 24px
+
+.card__title
+  +mont(sb)
+  font-size: 18px
+  line-height: 1.2
+  color: $blue-l
+
+  display: block
+  margin-bottom: 24px
+
+  @media (max-width: $tab-sm)
+    font-size: 16px
+    margin-bottom: 24px
+
+.card__text
+  margin-bottom: 32px
+
+  @media (max-width: $tab-sm)
+    max-width: 24em
+    margin-bottom: 24px
+
+.card .btn
+  margin-top: auto
+
