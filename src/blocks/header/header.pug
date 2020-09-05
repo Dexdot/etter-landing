@@ -1,5 +1,30 @@
 header.header
   .container
-    | Header 
-    +svg('polygon')
+    .header__inner
+      a.header__logo.u-center(href="#")
+        img(src="/assets/img/svg/logo.svg" alt="Logo")
+
+      nav.header__nav
+        ul
+          each text in ['Как это работает?', 'СМИ о нас', 'О компании', 'Переводчикам']
+            li
+              a(href="#")= text
+
+      .header__bar
+        .header__lang
+          .dropdown
+            button.dropdown__btn(type="button")
+              +svg('globe')
+              +svg('chevron')
+            .dropdown__content
+              a(href="#" class="is-active") Русский
+              a(href="#") English
+
+        .header__bar-row
+          +burger
+          a.img.u-center(href="#")
+            img.img__i(src="/assets/img/ava.jpg" alt="Avatar")
+
+          
+    
 

@@ -1,4 +1,67 @@
 .header
-  height: 80px
-  background: #000
-  color: #fff
+  top: 0
+  padding-top: 16px
+
+.header__inner
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.header__nav
+  line-height: 1
+
+  @media (max-width: $tab-sm)
+    display: none
+
+  ul,
+  li
+    display: flex
+    align-items: center
+
+  li:not(:first-child)
+    margin-left: 40px
+
+    @media (max-width: $tab)
+      margin-left: 16px
+
+  a
+    +link($black)
+    letter-spacing: 0.01em
+
+.header__bar
+  display: flex
+  align-items: center
+
+.header__lang
+  display: flex
+  margin-right: 24px
+
+  @media (max-width: $tab-sm)
+    display: none
+
+  .dropdown__content
+    right: 0
+    left: unset
+    text-align: right
+
+.header__bar-row
+  display: flex
+  align-items: center
+  min-height: 40px
+
+  border: 1px solid #EDEDED
+  border-radius: 42px
+
+  .burger
+    margin: 0 12px
+
+  a
+    width: 32px
+    height: 32px
+    overflow: hidden
+    margin-right: 5px
+
+    &,
+    & img
+      border-radius: 50%
+
