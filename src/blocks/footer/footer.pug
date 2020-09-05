@@ -1,2 +1,30 @@
 footer.footer
-  .container Footer
+  .container
+    .footer__inner
+      p.footer__copyright
+        | 2020 Etter, Inc. Все права защищены
+
+      nav.footer__nav
+        ul
+          each text in ['Конфиденциальность', 'Условия', 'Карта сайта', 'Часто задаваемые вопросы']
+            li
+              a(href="#")= text
+
+      .footer__dropdowns
+        .footer__dropdown
+          span Язык:
+          .dropdown
+            button.dropdown__btn(type="button")
+              span Русский
+              +svg('chevron')
+            .dropdown__content
+              a(href="#") English
+        .footer__dropdown
+          span Валюта:
+          .dropdown
+            button.dropdown__btn(type="button")
+              span Рубль
+              +svg('chevron')
+            .dropdown__content
+              a(href="#") Доллар
+
