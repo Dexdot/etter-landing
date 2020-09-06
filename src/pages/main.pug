@@ -213,3 +213,27 @@ block content
           
         +btn({ text: 'Рассчитать стоимость'})
 
+  section.translator
+    .translator__desktop
+      h2.translator__title.t-h2 Начните прямо сейчас
+      img(src="/assets/img/translator.png" alt="#")
+
+    .translator__mob
+      .container
+        h2.translator__title.t-h2 Что вам перевести?
+        .translator__cards
+          a.translator__card(href="#")
+            img(src="/assets/img/cards-2.png", alt="#")
+            .translator__card-text
+              b.translator__card-title
+                img(src="/assets/img/svg/google.svg", alt="Google")
+                | документ
+              p Документы, таблицы, дипломы, техническая документация и т.п
+          a.translator__card(href="#")
+            img(src="/assets/img/cards-1.png", alt="#")
+            .translator__card-text
+              b.translator__card-title
+                | Экспресс перевод
+              p Деловая переписка, справки и свидетельства
+
+

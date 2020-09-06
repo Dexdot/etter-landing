@@ -1,0 +1,71 @@
+.translator
+  @media (max-width: $tab-sm)
+    margin-bottom: 24px
+
+.translator__desktop
+  text-align: center
+  padding: 144px $unit 80px
+
+  @media (max-width: $tab-sm)
+    display: none
+
+  img
+    display: block
+    max-width: 1360px
+    width: 100%
+    margin: 0 auto
+    height: auto
+
+  .translator__title
+    color: $blue-l
+    margin-bottom: 56px
+
+.translator__mob
+  padding: 48px 0 56px
+  background: $blue-m
+  color: #fff
+
+  @media (min-width: $tab-sm + 1)
+    display: none
+
+  .translator__title
+    margin-bottom: 32px
+
+.translator__card
+  display: flex
+  padding: 24px 16px 24px 16px
+
+  border-radius: 8px
+  background: #fff
+
+  &:not(:last-child)
+    margin-bottom: 16px
+
+  img
+    display: block
+    margin-right: 16px
+    min-width: 40px
+    width: 40px
+    height: auto
+    max-height: 56px
+    object-fit: contain
+
+.translator__card-text p
+  font-size: 12px
+  line-height: 1.25
+  letter-spacing: 0.01em
+
+.translator__card-title
+  color: $blue-l
+  font-size: 14px
+  line-height: 1.2
+  +mont(sb)
+
+  margin-bottom: 8px
+
+  img
+    display: inline-block
+    vertical-align: middle
+
+    width: 3.7em
+    margin-right: 0.3em
