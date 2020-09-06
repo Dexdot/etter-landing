@@ -14,7 +14,8 @@
   "author": "https://gitlab.corp.code-pilots.ru/its",
   "license": "MIT",
   "dependencies": {
-    "html-loader": "^1.0.0"
+    "html-loader": "^1.0.0",
+    "swiper": "^6.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",

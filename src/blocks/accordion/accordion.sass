@@ -1,0 +1,62 @@
+// Accordion
+.accordion
+  position: relative
+
+  display: flex
+  flex-direction: column
+  align-items: stretch
+  justify-content: flex-start
+
+.accordion:not(:last-child)
+  margin-bottom: 32px
+
+
+// Button
+.accordion__btn
+  width: 100%
+  display: flex
+  align-items: center
+
+  position: relative
+
+  text-align: left
+  +mont(sb)
+  font-size: 16px
+  letter-spacing: -0.01em
+  color: rgba($blue-l, 0.8)
+
+.accordion__btn-num
+  min-width: 40px
+  width: 40px
+  height: 40px
+  margin-right: 24px
+
+  background: rgba($blue-s, 0)
+  border: 1px solid rgba($blue-l, 0.3)
+  border-radius: 50%
+
+  color: rgba($blue-l, 0.6)
+
+// Opened
+.accordion.active
+  .accordion__content
+    max-height: var(--acc-max-height)
+
+  .accordion__btn
+    color: rgba($blue-l, 1)
+
+  .accordion__btn-num
+    color: #fff
+    border: 1px solid rgba($blue-s, 1)
+    background: rgba($blue-s, 1)
+
+
+// Content
+.accordion__content
+  transition: max-height 0.25s ease
+  overflow: hidden
+  max-height: 0
+
+.accordion__content-inner
+  padding: 4px 0 0 64px
+  letter-spacing: -0.01em

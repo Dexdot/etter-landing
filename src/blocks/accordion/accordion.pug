@@ -1,0 +1,10 @@
+mixin accordion-item(text = '', num)
+  li.accordion&attributes(attributes)
+    button.accordion__btn(type="button")
+      if num !== 'undefined'
+        span.accordion__btn-num.u-center= num
+      span= text
+    .accordion__content
+      .accordion__content-inner
+        if block
+          block

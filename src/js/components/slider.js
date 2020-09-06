@@ -114,11 +114,11 @@ export default class Slider {
 
   hideSlides() {
     this.DOM.slides.forEach(slide => {
-      slide.classList.remove('active');
+      slide.classList.remove('is-active');
     });
   }
 
   showSlide() {
-    this.DOM.active.classList.add('active');
+    this.DOM.active.classList.add('is-active');
   }
 }

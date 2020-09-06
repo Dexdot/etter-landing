@@ -1,0 +1,139 @@
+.steps
+  .container
+    @media (max-width: $tab)
+      padding: 0
+
+.steps__wrap
+  padding: 124px 5.23vw 144px
+
+  @media (min-width: $tab + 1)
+    border-radius: 24px
+
+  @media (max-width: $tab)
+    padding: 80px $unit 96px
+
+.steps__desktop
+  @media (max-width: $tab)
+    display: none
+
+.steps__mob
+  @media (min-width: $tab + 1)
+    display: none
+
+.steps__inner
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+
+
+.steps:not(.steps--reverse)
+  .steps__wrap
+    background: rgba(#E8EDF7, 0.5)
+
+  .steps__text
+    max-width: 390px
+
+  .steps__title
+    color: $blue-l
+    margin-bottom: 48px
+
+    @media (max-width: $tab)
+      margin-bottom: 40px
+
+.steps--reverse
+  .steps__wrap
+    background: #FBF0E6
+
+  .steps__text
+    max-width: 410px
+
+  .steps__title
+    color: $blue-l
+    margin-bottom: 32px
+
+    @media (max-width: $tab)
+      margin-bottom: 40px
+
+    span
+      color: $blue-s
+      display: block
+
+  .steps__inner
+    flex-direction: row-reverse
+
+
+// Desktop slider
+.steps__slider
+  min-width: 61.4%
+  width: 61.4%
+
+  box-shadow: 0px 24px 90px rgba(31, 69, 104, 0.1)
+
+.steps:not(.steps--reverse)
+  .steps__slider
+    margin-left: 24px
+
+  .steps__slider::before
+    padding-top: 56.2%
+
+.steps--reverse
+  .steps__slider
+    margin-right: 24px
+
+  .steps__slider::before
+    padding-top: 54.6%
+
+.steps__slider li
+  transition: opacity 0.25s ease 0.125s
+
+.steps__slider li:not(.is-active)
+  opacity: 0
+  pointer-events: none
+
+
+// Mobile slider
+.steps__mob .steps__acc
+  margin-bottom: 16px
+
+.steps__mob .accordion
+  transition: opacity 0.3s ease 0.15s
+  min-width: calc(100vw - #{$unit} * 2)
+  display: block
+
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+  &-container
+    position: relative
+    display: flex
+    min-width: calc(100vw - #{$unit} * 2)
+
+  &:not(:last-child)
+    margin-bottom: 0
+
+  &.is-hidden
+    opacity: 0
+    pointer-events: none
+
+  &,
+  &.active
+    .accordion__content
+      max-height: unset
+
+.steps__mob-slider .swiper-slide
+  width: auto
+
+.steps__mob-slider .swiper-slide:last-child .steps__mob-slide
+  margin-right: 64vw
+
+.steps__mob-slide
+  width: 244px
+  box-sizing: border-box
+
+  img
+    display: block
+    width: 100%
+    height: auto

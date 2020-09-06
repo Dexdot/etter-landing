@@ -19,6 +19,61 @@ block content
         .hero__img
           img(src="/assets/img/svg/hero.svg" alt="Hero")
 
+  section.steps
+    -
+      var acc = [
+        { title: 'Добавьте текст или документ', text: 'После выбора языка вы сразу увидите цену и время на перевод.' },
+        { title: 'Зарегистрируйтесь', text: 'Регистрация по номеру телефона или соц. сеть займет масимум 2 минуты' },
+        { title: 'Дождитесь вашего перевода', text: 'После публикации ваш заказ будет доступен для отклика всем перводчикам в общей ленте заказов, первый откликнувшийся начнёт перевод незамедлительно' },
+        { title: 'Получите фрагмент перевода', text: 'Вы сможете ознакомиться с фрагментом переведенного текста' },
+        { title: 'Оплата', text: 'После оплаты вам будет доступен весь текст' },
+      ];
+    .container
+      .steps__wrap
+        .steps__desktop
+          .steps__inner
+            .steps__text
+              h2.steps__title.t-h2 Как это работает?
+              .steps__acc
+                ul.accordion-container.js-accordion
+                  each item, i in acc
+                    +accordion-item(item.title, i+1)
+                      p= item.text
+
+            .steps__slider.img
+              ul.js-slider-steps
+                each item in acc
+                  li
+                    .steps__slide.img__i
+                      img.img__i(src="/assets/img/steps-1.png" alt="#")
+
+        .steps__mob
+          h2.steps__title.t-h2 Как это работает?
+          .steps__acc
+            ul.accordion-container.js-accordion
+              each item, i in acc
+                +accordion-item(item.title, i+1)(class="active")
+                  p= item.text
+
+          .steps__mob-slider
+            .swiper-container.js-slider-steps-mob
+              .swiper-wrapper
+                .swiper-slide
+                  .steps__mob-slide
+                    img(src="/assets/img/steps-mob-1.png" alt="#")
+                .swiper-slide
+                  .steps__mob-slide
+                    img(src="/assets/img/steps-mob-2.png" alt="#")
+                .swiper-slide
+                  .steps__mob-slide
+                    img(src="/assets/img/steps-mob-1.png" alt="#")
+                .swiper-slide
+                  .steps__mob-slide
+                    img(src="/assets/img/steps-mob-2.png" alt="#")
+                .swiper-slide
+                  .steps__mob-slide
+                    img(src="/assets/img/steps-mob-1.png" alt="#")
+
   section.cta
     .container
       .cta__inner
@@ -30,6 +85,57 @@ block content
             | Машинный перевод не справляется?
           p Тогда воспользуйтесь нашим сервисом. Это так же просто как вызвать такси. 
           +btn({ text: 'Рассчитать стоимость' })
+  
+  section.steps.steps--reverse
+    -
+      var acc = [
+        { title: 'Общайтесь с переводчиком напрямую', text: 'Если вы закажете перевод документа, вам будет доступен чат с переводчиком, там он сможет задать вам уточняющие вопросы, а вы дать свои комментарии' },
+        { title: 'Экспресс-перевод', text: 'Добавьте свой текст до 4000 символов и дождитесь перевода. Перводчики-партнеры смогут перевести ваш текст даже с телефона, в любом удобном для них месте. Это позволяет вам получить перевод практически моментально.' },
+        { title: 'Удобная работа с несколькими заказами', text: 'Легко переключайтесь между различными заказами и поддерживайте переписку с переводчиками' }
+      ];
+    .container
+      .steps__wrap
+        .steps__desktop
+          .steps__inner
+            .steps__text
+              h2.steps__title.t-h2
+                span Уникальные
+                | возможности
+              .steps__acc
+                ul.accordion-container.js-accordion
+                  each item, i in acc
+                    +accordion-item(item.title, i+1)
+                      p= item.text
+
+            .steps__slider.img
+              ul.js-slider-steps
+                each item, i in acc
+                  li
+                    .steps__slide.img__i
+                      img.img__i(src=`/assets/img/steps-${i+2}.png` alt="#")
+
+        .steps__mob
+          h2.steps__title.t-h2
+            span Уникальные
+            | возможности
+          .steps__acc
+            ul.accordion-container.js-accordion
+              each item, i in acc
+                +accordion-item(item.title, i+1)(class="active")
+                  p= item.text
+
+          .steps__mob-slider
+            .swiper-container.js-slider-steps-mob
+              .swiper-wrapper
+                .swiper-slide
+                  .steps__mob-slide
+                    img(src="/assets/img/steps-mob-3.png" alt="#")
+                .swiper-slide
+                  .steps__mob-slide
+                    img(src="/assets/img/steps-mob-4.png" alt="#")
+                .swiper-slide
+                  .steps__mob-slide
+                    img(src="/assets/img/steps-mob-1.png" alt="#")
 
   section.banner
     .container
@@ -74,7 +180,6 @@ block content
                 b.card__title Проверку качества перевода
                 p.card__text Заказжите проверку у Etter, наши профессионалы быстро проверят и исправят ошибки
                 +btn({ text: 'Рассчитать стоимость'})
-
 
   section.features
     .container
