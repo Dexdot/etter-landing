@@ -6,9 +6,12 @@ html(lang='ru')
   body
     include ../templates/blocks.pug
     
-    //- Main content
-    main
-      block content
+    .scroll-container#js-scroll
+      include ../blocks/header/header.pug
+      
+      //- Main content
+      main
+        block content
 
-    //- Footer
-    include ../blocks/footer/footer.pug
+      //- Footer
+      include ../blocks/footer/footer.pug

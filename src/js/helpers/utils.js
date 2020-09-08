@@ -45,3 +45,12 @@ export const dispatch = (
     el.dispatchEvent(new Event(name));
   }
 };
+
+export const getComputedY = el => {
+  if (!el) return false;
+
+  const { transform } = el.style;
+  const mat = transform.match(/^matrix3d\((.+)\)$/);
+
+  return mat ? parseFloat(mat[1].split(', ')[13]) : null;
+};

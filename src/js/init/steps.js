@@ -9,6 +9,42 @@ $.each('.js-slider-steps', el => {
   el.slider = slider;
 });
 
+// Open first acc
+document.addEventListener('accordion:init', () => {
+  $.each('.steps__desktop .steps__acc', acc => {
+    const btn = $.qs('.accordion:first-child .accordion__btn', acc);
+    if (!btn) return false;
+    btn.click();
+  });
+
+  setTimeout(() => {
+    initialOpen = false;
+  }, 250);
+});
+
+// Update image slider on acc click
+document.addEventListener('accordion:complete', ({ detail }) => {
+  const { accordion, index } = detail;
+  const parent = accordion.closest('.steps__inner');
+  if (!parent) return false;
+
+  const sliderElement = $.qs('.js-slider-steps', parent);
+  if (!sliderElement) return false;
+
+  const { slider } = sliderElement;
+  slider.update(null, index);
+
+  if (initialOpen) return false;
+
+  // const wrapper = parent.closest('.steps__wrap');
+  // setTimeout(() => {
+  //   window.scrollTo({
+  //     behavior: 'smooth',
+  //     top: wrapper.offsetTop
+  //   });
+  // }, 250);
+});
+
 // Mobile slider init
 $.each('.js-slider-steps-mob', el => {
   const slider = new Swiper(el, {
@@ -53,40 +89,4 @@ document.addEventListener('accordion:init', () => {
 
   calc();
   window.addEventListener('resize', calc);
-});
-
-// Open first acc
-document.addEventListener('accordion:init', () => {
-  $.each('.steps__desktop .steps__acc', acc => {
-    const btn = $.qs('.accordion:first-child .accordion__btn', acc);
-    if (!btn) return false;
-    btn.click();
-  });
-
-  setTimeout(() => {
-    initialOpen = false;
-  }, 250);
-});
-
-// Update image slider on acc click
-document.addEventListener('accordion:complete', ({ detail }) => {
-  const { accordion, index } = detail;
-  const parent = accordion.closest('.steps__inner');
-  if (!parent) return false;
-
-  const sliderElement = $.qs('.js-slider-steps', parent);
-  if (!sliderElement) return false;
-
-  const { slider } = sliderElement;
-  slider.update(null, index);
-
-  if (initialOpen) return false;
-
-  const wrapper = parent.closest('.steps__wrap');
-  setTimeout(() => {
-    window.scrollTo({
-      behavior: 'smooth',
-      top: wrapper.offsetTop
-    });
-  }, 250);
 });

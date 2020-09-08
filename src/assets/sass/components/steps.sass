@@ -4,17 +4,22 @@
       padding: 0
 
 .steps__wrap
-  padding: 124px 5.23vw 144px
-
   @media (min-width: $tab + 1)
     border-radius: 24px
+    padding: 0 5.23vw
 
   @media (max-width: $tab)
     padding: 80px $unit 96px
 
 .steps__desktop
+  min-height: var(--height)
   @media (max-width: $tab)
     display: none
+
+.steps__desktop-inner
+  min-height: 100vh
+  display: flex
+  align-items: center
 
 .steps__mob
   @media (min-width: $tab + 1)
@@ -24,6 +29,13 @@
   display: flex
   align-items: flex-start
   justify-content: space-between
+
+  @media (min-width: $tab + 1)
+    width: 100%
+
+.steps__acc
+  pointer-events: none
+  user-select: none
 
 
 .steps:not(.steps--reverse)

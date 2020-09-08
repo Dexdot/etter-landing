@@ -30,22 +30,23 @@ block content
       ];
     .container
       .steps__wrap
-        .steps__desktop
-          .steps__inner
-            .steps__text
-              h2.steps__title.t-h2 Как это работает?
-              .steps__acc
-                ul.accordion-container.js-accordion
-                  each item, i in acc
-                    +accordion-item(item.title, i+1)
-                      p= item.text
+        .steps__desktop#steps-parent-1(data-steps=`${acc.length}` style=`--height: ${(acc.length+1)*100}vh`)
+          .steps__desktop-inner(data-scroll data-scroll-sticky data-scroll-target="#steps-parent-1")
+            .steps__inner
+              .steps__text
+                h2.steps__title.t-h2 Как это работает?
+                .steps__acc
+                  ul.accordion-container.js-accordion
+                    each item, i in acc
+                      +accordion-item(item.title, i+1)
+                        p= item.text
 
-            .steps__slider.img
-              ul.js-slider-steps
-                each item in acc
-                  li
-                    .steps__slide.img__i
-                      img.img__i(src="/assets/img/steps-1.png" alt="#")
+              .steps__slider.img
+                ul.js-slider-steps
+                  each item in acc
+                    li
+                      .steps__slide.img__i
+                        img.img__i(src="/assets/img/steps-1.png" alt="#")
 
         .steps__mob
           h2.steps__title.t-h2 Как это работает?
@@ -95,24 +96,25 @@ block content
       ];
     .container
       .steps__wrap
-        .steps__desktop
-          .steps__inner
-            .steps__text
-              h2.steps__title.t-h2
-                span Уникальные
-                | возможности
-              .steps__acc
-                ul.accordion-container.js-accordion
-                  each item, i in acc
-                    +accordion-item(item.title, i+1)
-                      p= item.text
+        .steps__desktop#steps-parent-2(data-steps=`${acc.length}` style=`--height: ${(acc.length+1)*100}vh`)
+          .steps__desktop-inner(data-scroll data-scroll-sticky data-scroll-target="#steps-parent-2")
+            .steps__inner
+              .steps__text
+                h2.steps__title.t-h2
+                  span Уникальные
+                  | возможности
+                .steps__acc
+                  ul.accordion-container.js-accordion
+                    each item, i in acc
+                      +accordion-item(item.title, i+1)
+                        p= item.text
 
-            .steps__slider.img
-              ul.js-slider-steps
-                each item, i in acc
-                  li
-                    .steps__slide.img__i
-                      img.img__i(src=`/assets/img/steps-${i+2}.png` alt="#")
+              .steps__slider.img
+                ul.js-slider-steps
+                  each item, i in acc
+                    li
+                      .steps__slide.img__i
+                        img.img__i(src=`/assets/img/steps-${i+2}.png` alt="#")
 
         .steps__mob
           h2.steps__title.t-h2
