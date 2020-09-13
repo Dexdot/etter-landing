@@ -1,5 +1,8 @@
-import Swiper from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
+import 'swiper/swiper-bundle.css';
+
 import Slider from '~/js/components/slider';
+Swiper.use([Navigation, Pagination]);
 
 let initialOpen = true;
 
@@ -50,7 +53,10 @@ $.each('.js-slider-steps-mob', el => {
   const slider = new Swiper(el, {
     slidesPerView: 'auto',
     spaceBetween: 16,
-    speed: 600
+    speed: 600,
+    pagination: {
+      el: '.swiper-pagination'
+    }
   });
 
   const onChange = () => {

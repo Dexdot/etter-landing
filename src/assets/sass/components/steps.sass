@@ -141,6 +141,33 @@
     .accordion__content
       max-height: unset
 
+  &__btn
+    align-items: flex-start
+
+.steps__mob-slider
+  overflow: hidden
+  .swiper-container
+    overflow: unset
+
+.steps__mob-slider .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+  margin: 0 6px
+
+.steps__mob-slider .swiper-pagination
+  position: static
+
+  margin-top: 32px
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 8px
+
+  &-bullet
+    opacity: 1
+    background: #C1CCDB
+
+  &-bullet-active
+    background: $blue-m
+
 .steps__mob-slider .swiper-slide
   width: auto
 

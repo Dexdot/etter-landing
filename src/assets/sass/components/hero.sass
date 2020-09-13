@@ -45,6 +45,7 @@
     position: relative
 
   @media (max-width: $tab-sm)
+    font-size: 14px
     margin-bottom: 16px
 
   &::before
@@ -66,6 +67,10 @@
 
   @media (min-width: $tab-sm + 1)
     font-size: 16px
+
+  span
+    @media (max-width: $tab-sm)
+      display: none
 
 .hero__paragraph
   margin-bottom: 48px
