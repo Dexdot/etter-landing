@@ -41,8 +41,8 @@ block content
                   ul.accordion-container.js-accordion
                     each item, i in acc
                       +accordion-item(item.title, i+1)
-                        p= item.text
-                        //- p= acc[3].text
+                        //- p= item.text
+                        p= acc[3].text
 
               .steps__slider.img
                 ul.js-slider-steps
@@ -111,8 +111,8 @@ block content
                   ul.accordion-container.js-accordion
                     each item, i in acc
                       +accordion-item(item.title, i+1)
-                        p= item.text
-                        //- p= acc[1].text
+                        //- p= item.text
+                        p= acc[1].text
 
               .steps__slider.img
                 ul.js-slider-steps

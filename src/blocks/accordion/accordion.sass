@@ -47,8 +47,11 @@
   .accordion__content
     max-height: var(--acc-max-height)
     opacity: 1
-    // transition: opacity 0.35s ease 0.15s
-    transition: opacity 0.35s ease 0.15s, max-height 0.35s ease 0.15s
+    transition: opacity 0.35s ease 0.15s
+    // transition: opacity 0.35s ease 0.15s, max-height 0.35s ease 0.15s
+
+  .accordion__btn
+    color: rgba($blue-l, 1)
 
   .accordion__btn-num
     color: #fff
@@ -62,8 +65,8 @@
   max-height: 0
 
   opacity: 0
-  // transition: opacity 0.35s ease
-  transition: opacity 0.35s ease, max-height 0.35s ease
+  transition: opacity 0.35s ease
+  // transition: opacity 0.35s ease, max-height 0.35s ease
 
 .accordion__content-inner
   padding: 4px 0 0 64px

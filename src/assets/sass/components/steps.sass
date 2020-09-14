@@ -4,9 +4,9 @@
       padding: 0
 
 .steps__wrap
-  @media (min-width: $tab + 1)
-    border-radius: 24px
-    padding: 0 5.23vw
+  // @media (min-width: $tab + 1)
+  //   border-radius: 24px
+  //   padding: 0 5.23vw
 
   @media (max-width: $tab)
     padding: 80px $unit 96px
@@ -18,8 +18,8 @@
 
   .steps__text
     @media (min-width: $tab + 1)
-      min-height: 80vh
-      // min-height: 60vh
+      min-height: 60vh
+      // min-height: 80vh
 
 .steps__desktop-inner
   min-height: 100vh
@@ -47,14 +47,14 @@
 
 .steps:not(.steps--reverse)
   .steps__wrap
-    background: rgba(#E8EDF7, 0.5)
-    // @media (max-width: $tab)
+    @media (max-width: $tab)
+      background: rgba(#E8EDF7, 0.5)
       
-  // .steps__inner
-  //   @media (min-width: $tab + 1)
-  //     padding: 120px 5.23vw
-  //     border-radius: 24px
-  //     background: rgba(#E8EDF7, 0.5)
+  .steps__inner
+    @media (min-width: $tab + 1)
+      padding: 120px 5.23vw
+      border-radius: 24px
+      background: rgba(#E8EDF7, 0.5)
 
   .steps__text
     max-width: 390px
@@ -68,14 +68,14 @@
 
 .steps--reverse
   .steps__wrap
-    background: #FBF0E6
-    // @media (max-width: $tab)
+    @media (max-width: $tab)
+      background: #FBF0E6
 
-  // .steps__inner
-  //   @media (min-width: $tab + 1)
-  //     padding: 120px 5.23vw
-  //     border-radius: 24px
-  //     background: #FBF0E6
+  .steps__inner
+    @media (min-width: $tab + 1)
+      padding: 120px 5.23vw
+      border-radius: 24px
+      background: #FBF0E6
 
   .steps__text
     max-width: 410px
