@@ -64,7 +64,8 @@ $.each('.js-slider-steps-mob', el => {
     if (!parent) return false;
     const accs = $.qsa('.accordion', parent);
 
-    const index = slider.realIndex;
+    const { isEnd, slides, realIndex } = slider;
+    const index = isEnd ? slides.length - 1 : slider.realIndex;
 
     accs.forEach((acc, i) => {
       acc.classList[i === index ? 'remove' : 'add']('is-hidden');
@@ -72,7 +73,7 @@ $.each('.js-slider-steps-mob', el => {
   };
 
   onChange();
-  slider.on('slideChange', onChange);
+  slider.on('transitionStart', onChange);
 });
 
 // Mobile acc size
